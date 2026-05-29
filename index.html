@@ -773,6 +773,25 @@
   @media (max-width: 600px) {
     .nav-links { display: none; }
   }
+
+  /* PayPal Tip */
+  .nav-tip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #0070ba;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    padding: 7px 16px;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+  }
+  .nav-tip:hover { background: #005ea6; transform: scale(1.05); }
+  @media (max-width: 600px) { .nav-tip { font-size: 0; padding: 8px 12px; } .nav-tip svg { width: 18px; height: 18px; } }
 </style>
 </head>
 <body>
@@ -789,7 +808,12 @@
     <li><a href="#univers">Univers</a></li>
     <li><a href="#nouveautes">Nouveautés</a></li>
     <li><a href="https://www.youtube.com/@Tanjiro-59-rnb" target="_blank">YouTube ↗</a></li>
+    <li><a href="https://www.twitch.tv/lmtwitch59" target="_blank" style="color:#9147ff;">Twitch ↗</a></li>
   </ul>
+  <a href="https://paypal.me/LorenzoManet?locale.x=fr_FR&country.x=FR" target="_blank" class="nav-tip">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.067 8.478c.492.315.844.825.983 1.39.47 1.862-.994 3.55-2.983 3.55h-.535c-.29 0-.536.214-.582.5l-.588 3.714a.585.585 0 0 1-.577.497H13.16a.35.35 0 0 1-.346-.4l.1-.635.638-4.035.041-.259a.585.585 0 0 1 .577-.5h.364c2.358 0 4.202-1.105 4.742-4.302.191-1.105.098-2.026-.41-2.675a2.52 2.52 0 0 0-.8-.613c.08.327.116.678.116 1.055 0 .508-.08.978-.233 1.413zM6.5 8.25c.164-1.04 1.05-1.75 2.1-1.75h6.077c.718 0 1.387.19 1.944.522a4.23 4.23 0 0 0-.233-1.413c-.576-1.566-2.02-2.109-3.845-2.109H6.316a.588.588 0 0 0-.58.497L3.698 17.5a.352.352 0 0 0 .347.4h2.534l.636-4.02L6.5 8.25z"/></svg>
+    💛 Tip
+  </a>
 </nav>
 
 <!-- HERO -->
@@ -1016,6 +1040,10 @@
       </a>
       <a href="https://www.youtube.com/@Tanjiro-59-rnb?sub_confirmation=1" target="_blank" class="btn-secondary">
         S'abonner ↗
+      </a>
+      <a href="https://www.twitch.tv/lmtwitch59" target="_blank" class="btn-secondary" style="border-color:rgba(145,71,255,0.4);color:#9147ff;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+        Twitch ↗
       </a>
     </div>
   </div>
