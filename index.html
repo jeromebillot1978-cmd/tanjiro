@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>‼️ Tanjiro 59 ‼️ — Shorts Animé & BMW</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #e8001e;
+    --red2: #ff3355;
+    --dark: #060608;
+    --dark2: #0d0d14;
+    --card: #10101a;
+    --gold: #f5c400;
+    --white: #f0f0f8;
+    --grey: #888aaa;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dark);
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* CUSTOM CURSOR */
+  .cursor {
+    width: 18px; height: 18px;
+    background: var(--red);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s, background 0.2s;
+    mix-blend-mode: screen;
+  }
+  .cursor-ring {
+    width: 40px; height: 40px;
+    border: 2px solid var(--red2);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.18s ease, width 0.2s, height 0.2s;
+    opacity: 0.6;
+  }
+
+  /* NOISE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ─── HERO ─────────────────────────────── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(232,0,30,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 80% at 20% 80%, rgba(255,51,85,0.1) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 80% 10%, rgba(245,196,0,0.07) 0%, transparent 60%);
+  }
+
+  /* Animated grid lines */
+  .grid-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(232,0,30,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,0,30,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridMove 20s linear infinite;
+  }
+  @keyframes gridMove {
+    from { transform: translateY(0); }
+    to { transform: translateY(60px); }
+  }
+
+  .hero-slash {
+    position: absolute;
+    top: 0; left: -20%;
+    width: 40%; height: 120%;
+    background: linear-gradient(105deg, transparent 40%, rgba(232,0,30,0.05) 50%, transparent 60%);
+    animation: slashMove 4s ease-in-out infinite alternate;
+  }
+  @keyframes slashMove {
+    from { transform: translateX(-10%) rotate(-5deg); }
+    to { transform: translateX(10%) rotate(-5deg); }
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    padding: 4px 16px;
+    margin-bottom: 1.5rem;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    animation: fadeDown 0.6s ease both;
+  }
+
+  .hero-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(3.5rem, 12vw, 9rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, #ffffff 0%, #ff3355 50%, #f5c400 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeUp 0.8s ease 0.2s both;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title span {
+    display: block;
+    font-size: 0.28em;
+    letter-spacing: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+    -webkit-text-fill-color: var(--grey);
+    background: none;
+    margin-top: 0.5rem;
+  }
+
+  .hero-sub {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--grey);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 1.5rem 0 2.5rem;
+    animation: fadeUp 0.8s ease 0.4s both;
+  }
+
+  .hero-sub em {
+    color: var(--red2);
+    font-style: normal;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    padding: 14px 40px;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    transition: all 0.2s;
+    animation: fadeUp 0.8s ease 0.6s both;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.15);
+    transform: translateX(-100%) skewX(-15deg);
+    transition: transform 0.3s;
+  }
+  .hero-cta:hover::after { transform: translateX(100%) skewX(-15deg); }
+  .hero-cta:hover { background: var(--red2); transform: scale(1.04); }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: var(--grey);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: fadeUp 1s ease 1s both;
+  }
+  .scroll-hint::after {
+    content: '';
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--red), transparent);
+    animation: scrollLine 1.5s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.5); }
+    50% { opacity: 1; transform: scaleY(1); }
+  }
+
+  /* ─── STATS BAR ─────────────────────────── */
+  .stats-bar {
+    background: var(--card);
+    border-top: 1px solid rgba(232,0,30,0.3);
+    border-bottom: 1px solid rgba(232,0,30,0.3);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: clamp(2rem, 6vw, 6rem);
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .stat:nth-child(1) { animation-delay: 0.1s; }
+  .stat:nth-child(2) { animation-delay: 0.2s; }
+  .stat:nth-child(3) { animation-delay: 0.3s; }
+
+  .stat-num {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--red);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-top: 4px;
+  }
+
+  /* ─── SECTIONS ──────────────────────────── */
+  section {
+    padding: 6rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .section-title .accent { color: var(--red); }
+
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: var(--red);
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  .divider::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 10px;
+    height: 3px;
+    background: var(--gold);
+  }
+
+  /* ─── ABOUT ─────────────────────────────── */
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 700px) {
+    #about { grid-template-columns: 1fr; }
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #b0b2cc;
+    margin-bottom: 1rem;
+  }
+  .about-text p strong { color: var(--white); }
+  .about-text p .highlight {
+    color: var(--red2);
+    font-weight: 700;
+  }
+
+  .about-card {
+    background: var(--card);
+    border: 1px solid rgba(232,0,30,0.2);
+    border-left: 3px solid var(--red);
+    padding: 2.5rem;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+  }
+
+  .about-card::before {
+    content: '‼️';
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 2.5rem;
+    filter: drop-shadow(0 0 10px rgba(232,0,30,0.5));
+  }
+
+  .about-card .name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+  }
+  .about-card .handle {
+    font-size: 0.9rem;
+    color: var(--red2);
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+  }
+  .about-card .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    background: rgba(232,0,30,0.15);
+    border: 1px solid rgba(232,0,30,0.4);
+    color: var(--red2);
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    text-transform: uppercase;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  }
+
+  /* ─── CONTENU ───────────────────────────── */
+  #content {
+    padding-top: 0;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .content-card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  }
+  .content-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(232,0,30,0.05) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .content-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(232,0,30,0.4);
+  }
+  .content-card:hover::before { opacity: 1; }
+
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    filter: drop-shadow(0 0 8px rgba(232,0,30,0.4));
+  }
+  .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  .card-desc {
+    font-size: 0.95rem;
+    color: var(--grey);
+    line-height: 1.7;
+  }
+  .card-accent {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 40px; height: 3px;
+    background: var(--red);
+  }
+
+  /* ─── UNIVERS ───────────────────────────── */
+  #univers {
+    background: var(--dark2);
+    max-width: 100%;
+    padding: 6rem 2rem;
+  }
+  #univers-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .univers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .univers-item {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .univers-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--red);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  .univers-item:hover { transform: translateY(-4px); background: rgba(232,0,30,0.08); }
+  .univers-item:hover::after { transform: scaleX(1); }
+  .univers-item .emoji { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+  .univers-item .name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--white);
+  }
+
+  /* ─── CTA SECTION ───────────────────────── */
+  #cta-section {
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  #cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(232,0,30,0.12) 0%, transparent 70%);
+  }
+  #cta-section .big-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+  #cta-section p {
+    color: var(--grey);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+  .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    padding: 14px 36px;
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary:hover { background: var(--red2); transform: scale(1.05); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    padding: 12px 36px;
+    border: 1px solid rgba(255,255,255,0.2);
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--red); color: var(--red); }
+
+  /* ─── NOUVEAUTÉS ────────────────────────── */
+  #nouveautes {
+    background: var(--dark);
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  #nouveautes::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 80% 50%, rgba(245,196,0,0.05) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 10% 50%, rgba(232,0,30,0.07) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  #nouveautes-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .new-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .new-card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.05);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+    cursor: pointer;
+  }
+  .new-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(232,0,30,0.5);
+    box-shadow: 0 12px 40px rgba(232,0,30,0.2);
+  }
+  .new-card-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #0a0a12;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .new-card-thumb .thumb-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    opacity: 0.15;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .new-card:hover .thumb-bg { opacity: 0.25; transform: scale(1.1); }
+  .new-card-thumb .play-btn {
+    width: 52px; height: 52px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 2;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 20px rgba(232,0,30,0.5);
+  }
+  .new-card:hover .play-btn { transform: scale(1.15); box-shadow: 0 0 30px rgba(232,0,30,0.8); }
+  .new-card-thumb .new-badge {
+    position: absolute;
+    top: 10px; left: 10px;
+    background: var(--gold);
+    color: #000;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    padding: 2px 10px;
+    clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
+    z-index: 3;
+  }
+  .new-card-thumb .duration {
+    position: absolute;
+    bottom: 8px; right: 8px;
+    background: rgba(0,0,0,0.8);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 7px;
+    border-radius: 2px;
+    z-index: 3;
+  }
+  .new-card-body {
+    padding: 1.2rem 1.4rem 1.4rem;
+    position: relative;
+  }
+  .new-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.5rem;
+  }
+  .new-card-type {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--red2);
+    text-transform: uppercase;
+  }
+  .new-card-dot { width: 3px; height: 3px; background: var(--grey); border-radius: 50%; }
+  .new-card-date {
+    font-size: 0.75rem;
+    color: var(--grey);
+    letter-spacing: 1px;
+  }
+  .new-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+    transition: color 0.2s;
+  }
+  .new-card:hover .new-card-title { color: var(--red2); }
+  .new-card-desc {
+    font-size: 0.88rem;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+  .new-card-footer {
+    padding: 0 1.4rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .new-card-views {
+    font-size: 0.78rem;
+    color: var(--grey);
+    letter-spacing: 1px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .new-card-views svg { opacity: 0.6; }
+  .new-card-link {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--red);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .new-card-link:hover { color: var(--red2); }
+  .new-card-accent {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--red), var(--gold));
+    transition: width 0.4s ease;
+  }
+  .new-card:hover .new-card-accent { width: 100%; }
+
+  /* ─── FOOTER ────────────────────────────── */
+  footer {
+    background: var(--card);
+    border-top: 1px solid rgba(232,0,30,0.2);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--grey);
+    letter-spacing: 2px;
+  }
+  footer span { color: var(--red); }
+
+  /* ─── ANIMATIONS ────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(6,6,8,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(232,0,30,0.15);
+  }
+  .nav-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--red); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    color: var(--grey);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--red); }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">‼️ <span>TANJIRO</span> 59</a>
+  <ul class="nav-links">
+    <li><a href="#about">Profil</a></li>
+    <li><a href="#content">Contenu</a></li>
+    <li><a href="#univers">Univers</a></li>
+    <li><a href="#nouveautes">Nouveautés</a></li>
+    <li><a href="https://www.youtube.com/@Tanjiro-59-rnb" target="_blank">YouTube ↗</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-bg"></div>
+  <div class="grid-lines"></div>
+  <div class="hero-slash"></div>
+
+  <div class="badge">Créateur de contenu • Nord (59)</div>
+
+  <h1 class="hero-title">
+    TANJIRO
+    <span>@Tanjiro-59-rnb</span>
+  </h1>
+
+  <p class="hero-sub">Shorts <em>Animé</em> &amp; <em>BMW</em></p>
+
+  <a href="https://www.youtube.com/@Tanjiro-59-rnb" target="_blank" class="hero-cta">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+    S'abonner
+  </a>
+
+  <div class="scroll-hint">Scroll</div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">59</div>
+    <div class="stat-label">Département</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">SHORTS</div>
+    <div class="stat-label">Format</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Passion</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-text reveal">
+    <p class="section-tag">— Qui suis-je</p>
+    <h2 class="section-title">L'<span class="accent">Univers</span><br>Tanjiro 59</h2>
+    <div class="divider"></div>
+    <p>Je m'appelle <strong>L.M</strong>, créateur de contenu venu du <span class="highlight">Nord (59)</span>. Sur ma chaîne, je partage ma passion pour deux univers que j'adore : les <strong>animés</strong> et les <strong>BMW</strong>.</p>
+    <p>Des <span class="highlight">Shorts percutants</span>, des montages soignés, et un style bien à moi — bienvenue dans mon monde !</p>
+    <p>Que tu sois fan de Demon Slayer, d'Akatsuki, ou de belles allemandes, tu es au bon endroit. 🔥</p>
+  </div>
+  <div class="about-card reveal">
+    <div class="name">L.M</div>
+    <div class="handle">@Tanjiro-59-rnb</div>
+    <div class="tag-list">
+      <span class="tag">Anime</span>
+      <span class="tag">BMW</span>
+      <span class="tag">Shorts</span>
+      <span class="tag">Nord 59</span>
+      <span class="tag">Montage</span>
+      <span class="tag">R&B Vibes</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section id="content">
+  <div class="reveal">
+    <p class="section-tag">— Ce que je crée</p>
+    <h2 class="section-title">Mon <span class="accent">Contenu</span></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="content-grid">
+    <div class="content-card reveal">
+      <span class="card-icon">⚔️</span>
+      <div class="card-title">Shorts Animé</div>
+      <p class="card-desc">Des clips courts et intenses tirés des meilleurs moments de tes animés préférés. Action, drama, epic moments — tout y passe.</p>
+      <div class="card-accent"></div>
+    </div>
+    <div class="content-card reveal">
+      <span class="card-icon">🚗</span>
+      <div class="card-title">BMW & Cars</div>
+      <p class="card-desc">La passion des belles bagnoles allemandes. Montages, Sons, style — les BMW ont leur place ici comme nulle part ailleurs.</p>
+      <div class="card-accent"></div>
+    </div>
+    <div class="content-card reveal">
+      <span class="card-icon">🎬</span>
+      <div class="card-title">Montage Créatif</div>
+      <p class="card-desc">Chaque Short est monté avec soin pour te garder accroché de la première à la dernière seconde. Le rythme, c'est tout.</p>
+      <div class="card-accent"></div>
+    </div>
+  </div>
+</section>
+
+<!-- UNIVERS -->
+<div id="univers">
+  <div id="univers-inner">
+    <div class="reveal">
+      <p class="section-tag">— Mes influences</p>
+      <h2 class="section-title">L'<span class="accent">Univers</span> Animé</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="univers-grid">
+      <div class="univers-item reveal"><span class="emoji">🌊</span><div class="name">Demon Slayer</div></div>
+      <div class="univers-item reveal"><span class="emoji">🍥</span><div class="name">Naruto</div></div>
+      <div class="univers-item reveal"><span class="emoji">⚡</span><div class="name">Dragon Ball</div></div>
+      <div class="univers-item reveal"><span class="emoji">🏴‍☠️</span><div class="name">One Piece</div></div>
+      <div class="univers-item reveal"><span class="emoji">💥</span><div class="name">My Hero Academia</div></div>
+      <div class="univers-item reveal"><span class="emoji">🚗</span><div class="name">BMW Series</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- NOUVEAUTÉS -->
+<div id="nouveautes">
+  <div id="nouveautes-inner">
+    <div class="reveal">
+      <p class="section-tag">— Tout chaud</p>
+      <h2 class="section-title">Dernières <span class="accent">Nouveautés</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="new-grid">
+
+      <!-- Card 1 — Vidéo intégrée -->
+      <div class="new-card reveal" style="cursor:default;">
+        <div class="new-badge" style="position:absolute;top:10px;left:10px;z-index:5;background:var(--gold);color:#000;font-family:'Bebas Neue',sans-serif;font-size:0.7rem;letter-spacing:2px;padding:2px 10px;clip-path:polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);">NOUVEAU</div>
+        <div style="width:100%;aspect-ratio:9/16;position:relative;overflow:hidden;border-radius:0;">
+          <iframe
+            src="https://www.youtube.com/embed/c2rAayhXkcA?autoplay=0&rel=0"
+            title="Tanjiro 59 — Nouveauté"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="width:100%;height:100%;border:none;display:block;">
+          </iframe>
+        </div>
+        <div class="new-card-body">
+          <div class="new-card-meta">
+            <span class="new-card-type">Nouveau Short</span>
+            <div class="new-card-dot"></div>
+            <span class="new-card-date">2026</span>
+          </div>
+          <div class="new-card-title">Dernier Short — À ne pas rater 🔥</div>
+          <p class="new-card-desc">Le tout dernier Short de la chaîne. Like, commente et abonne-toi si t'es là !</p>
+          <div class="new-card-accent"></div>
+        </div>
+        <div class="new-card-footer">
+          <span class="new-card-views">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            YouTube Short
+          </span>
+          <a href="https://www.youtube.com/watch?v=c2rAayhXkcA" target="_blank" class="new-card-link">Ouvrir ↗</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="new-card reveal" onclick="window.open('https://www.youtube.com/@Tanjiro-59-rnb','_blank')">
+        <div class="new-card-thumb">
+          <div class="thumb-bg">🚗</div>
+          <div class="play-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="duration">#SHORT</div>
+        </div>
+        <div class="new-card-body">
+          <div class="new-card-meta">
+            <span class="new-card-type">BMW</span>
+            <div class="new-card-dot"></div>
+            <span class="new-card-date">Mai 2026</span>
+          </div>
+          <div class="new-card-title">BMW M4 Competition — Pure Passion 🚗💨</div>
+          <p class="new-card-desc">La M4 sous toutes ses coutures. Son, looks, vibes — le genre de vidéo qu'on regarde 10 fois.</p>
+          <div class="new-card-accent"></div>
+        </div>
+        <div class="new-card-footer">
+          <span class="new-card-views">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            Sur la chaîne
+          </span>
+          <a href="https://www.youtube.com/@Tanjiro-59-rnb" target="_blank" class="new-card-link">Voir ↗</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="new-card reveal" onclick="window.open('https://www.youtube.com/@Tanjiro-59-rnb','_blank')">
+        <div class="new-card-thumb">
+          <div class="thumb-bg">🍥</div>
+          <div class="play-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="duration">#SHORT</div>
+        </div>
+        <div class="new-card-body">
+          <div class="new-card-meta">
+            <span class="new-card-type">Animé</span>
+            <div class="new-card-dot"></div>
+            <span class="new-card-date">Avril 2026</span>
+          </div>
+          <div class="new-card-title">Naruto — Rasengan de Légende 🍥⚡</div>
+          <p class="new-card-desc">Le clip qui remet Naruto au sommet. Edit ultra-stylé avec une musique qui claque.</p>
+          <div class="new-card-accent"></div>
+        </div>
+        <div class="new-card-footer">
+          <span class="new-card-views">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            Sur la chaîne
+          </span>
+          <a href="https://www.youtube.com/@Tanjiro-59-rnb" target="_blank" class="new-card-link">Voir ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section id="cta-section">
+  <div class="reveal">
+    <p class="big-text">Rejoins la<br><span style="color:var(--red)">Communauté</span> ‼️</p>
+    <p>Abonne-toi et ne rate aucun Short. La chaîne monte, sois là dès le début !</p>
+    <div class="btn-group">
+      <a href="https://www.youtube.com/@Tanjiro-59-rnb" target="_blank" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+        Voir la Chaîne YouTube
+      </a>
+      <a href="https://www.youtube.com/@Tanjiro-59-rnb?sub_confirmation=1" target="_blank" class="btn-secondary">
+        S'abonner ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>‼️ Tanjiro 59 ‼️</span> — Tous droits réservés — Nord (59) 🔥</p>
+</footer>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function animCursor() {
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) *.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animCursor);
+  }
+  animCursor();
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.style.transform = 'translate(-50%,-50%) scale(2)'; ring.style.width = '60px'; ring.style.height = '60px'; });
+    el.addEventListener('mouseleave', () => { cursor.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.width = '40px'; ring.style.height = '40px'; });
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+<!-- ─── CHATBOT ──────────────────────────────────────────────── -->
+<style>
+  /* Bouton flottant */
+  #chat-toggle {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    width: 58px; height: 58px;
+    background: var(--red);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 800;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 20px rgba(232,0,30,0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 20px rgba(232,0,30,0.5); }
+    50% { box-shadow: 0 0 35px rgba(232,0,30,0.9); }
+  }
+  #chat-toggle:hover { transform: scale(1.1); }
+  #chat-toggle svg { width: 26px; height: 26px; fill: #fff; }
+  #chat-toggle .close-icon { display: none; }
+  #chat-toggle.open .chat-icon { display: none; }
+  #chat-toggle.open .close-icon { display: block; }
+
+  /* Fenêtre chat */
+  #chat-window {
+    position: fixed;
+    bottom: 100px; right: 28px;
+    width: 360px;
+    max-height: 520px;
+    background: #0d0d16;
+    border: 1px solid rgba(232,0,30,0.35);
+    border-radius: 2px;
+    display: flex; flex-direction: column;
+    z-index: 799;
+    box-shadow: 0 0 40px rgba(0,0,0,0.7), 0 0 20px rgba(232,0,30,0.15);
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(.4,0,.2,1);
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  }
+  #chat-window.open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* Header */
+  .chat-header {
+    background: linear-gradient(90deg, #1a0008, #14001a);
+    border-bottom: 1px solid rgba(232,0,30,0.3);
+    padding: 14px 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .chat-avatar {
+    width: 36px; height: 36px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(232,0,30,0.5);
+  }
+  .chat-header-info .chat-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+  .chat-header-info .chat-status {
+    font-size: 0.7rem;
+    color: #44ff88;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .chat-header-info .chat-status::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: #44ff88;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* Messages */
+  #chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(232,0,30,0.3) transparent;
+  }
+  #chat-messages::-webkit-scrollbar { width: 4px; }
+  #chat-messages::-webkit-scrollbar-track { background: transparent; }
+  #chat-messages::-webkit-scrollbar-thumb { background: rgba(232,0,30,0.3); border-radius: 2px; }
+
+  .msg {
+    max-width: 85%;
+    padding: 9px 13px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-radius: 2px;
+    animation: msgIn 0.2s ease;
+  }
+  @keyframes msgIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .msg.bot {
+    background: #161624;
+    border: 1px solid rgba(232,0,30,0.2);
+    border-left: 2px solid var(--red);
+    color: var(--white);
+    align-self: flex-start;
+  }
+  .msg.user {
+    background: var(--red);
+    color: #fff;
+    align-self: flex-end;
+    border: none;
+  }
+  .msg.typing {
+    display: flex; gap: 5px; align-items: center;
+    padding: 12px 16px;
+  }
+  .msg.typing span {
+    width: 7px; height: 7px;
+    background: var(--red2);
+    border-radius: 50%;
+    animation: dot 1s infinite;
+  }
+  .msg.typing span:nth-child(2) { animation-delay: 0.2s; }
+  .msg.typing span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes dot { 0%,80%,100%{transform:scale(0.6);opacity:0.4} 40%{transform:scale(1);opacity:1} }
+
+  /* Suggestions rapides */
+  .quick-btns {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    padding: 0 14px 10px;
+  }
+  .quick-btn {
+    background: rgba(232,0,30,0.1);
+    border: 1px solid rgba(232,0,30,0.3);
+    color: var(--red2);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+    clip-path: polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);
+  }
+  .quick-btn:hover { background: rgba(232,0,30,0.25); color: #fff; }
+
+  /* Input */
+  .chat-input-area {
+    border-top: 1px solid rgba(232,0,30,0.2);
+    padding: 10px 12px;
+    display: flex; gap: 8px; align-items: center;
+  }
+  #chat-input {
+    flex: 1;
+    background: #1a1a28;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    outline: none;
+    border-radius: 2px;
+    transition: border-color 0.2s;
+  }
+  #chat-input:focus { border-color: rgba(232,0,30,0.5); }
+  #chat-input::placeholder { color: var(--grey); }
+  #chat-send {
+    background: var(--red);
+    border: none;
+    color: #fff;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    transition: background 0.2s;
+    clip-path: polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);
+  }
+  #chat-send:hover { background: var(--red2); }
+
+  @media (max-width: 420px) {
+    #chat-window { width: calc(100vw - 32px); right: 16px; }
+  }
+</style>
+
+<!-- Bouton toggle -->
+<button id="chat-toggle" onclick="toggleChat()" title="Chat avec Tanjiro Bot">
+  <svg class="chat-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+  <svg class="close-icon" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+</button>
+
+<!-- Fenêtre -->
+<div id="chat-window">
+  <div class="chat-header">
+    <div class="chat-avatar">‼️</div>
+    <div class="chat-header-info">
+      <div class="chat-name">TANJIRO BOT</div>
+      <div class="chat-status">En ligne</div>
+    </div>
+  </div>
+
+  <div id="chat-messages">
+    <div class="msg bot">Yo ! 👋 Je suis le bot de <strong>Tanjiro 59</strong>. Pose-moi des questions sur la chaîne, les animés ou les BMW ! ⚔️🚗</div>
+  </div>
+
+  <div class="quick-btns" id="quick-btns">
+    <button class="quick-btn" onclick="sendQuick('C\'est qui Tanjiro 59 ?')">C'est qui ? 👤</button>
+    <button class="quick-btn" onclick="sendQuick('Quel contenu tu fais ?')">Contenu 🎬</button>
+    <button class="quick-btn" onclick="sendQuick('Tu parles de quels animés ?')">Animés ⚔️</button>
+    <button class="quick-btn" onclick="sendQuick('Pourquoi les BMW ?')">BMW 🚗</button>
+  </div>
+
+  <div class="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Pose ta question..." maxlength="300"
+      onkeydown="if(event.key==='Enter') sendMessage()">
+    <button id="chat-send" onclick="sendMessage()">Envoyer</button>
+  </div>
+</div>
+
+<script>
+  // ── Chatbot ──────────────────────────────────────────
+  const SYSTEM_PROMPT = `Tu es le chatbot officiel de la chaîne YouTube "Tanjiro 59" (@Tanjiro-59-rnb).
+Tu t'exprimes en français, avec un style jeune, dynamique et passionné. Tu utilises des emojis de temps en temps.
+Tu représentes le créateur L.M, originaire du Nord (59), qui fait des Shorts YouTube sur les animés (Demon Slayer, Naruto, Dragon Ball, One Piece, My Hero Academia) et les BMW.
+Sa chaîne est : https://www.youtube.com/@Tanjiro-59-rnb
+Réponds de façon courte (2-4 phrases max), sympa et dans l'esprit de la chaîne.
+Si on te demande quelque chose hors sujet, ramène toujours la conversation vers la chaîne, les animés ou les BMW.`;
+
+  let chatHistory = [];
+  let isTyping = false;
+
+  function toggleChat() {
+    const win = document.getElementById('chat-window');
+    const btn = document.getElementById('chat-toggle');
+    win.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+
+  function addMsg(text, role) {
+    const box = document.getElementById('chat-messages');
+    const div = document.createElement('div');
+    div.className = 'msg ' + role;
+    div.innerHTML = text;
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+    return div;
+  }
+
+  function showTyping() {
+    const box = document.getElementById('chat-messages');
+    const div = document.createElement('div');
+    div.className = 'msg bot typing';
+    div.id = 'typing-indicator';
+    div.innerHTML = '<span></span><span></span><span></span>';
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+  }
+
+  function removeTyping() {
+    const el = document.getElementById('typing-indicator');
+    if (el) el.remove();
+  }
+
+  function hideQuickBtns() {
+    const q = document.getElementById('quick-btns');
+    if (q) q.style.display = 'none';
+  }
+
+  async function sendQuick(text) {
+    hideQuickBtns();
+    await doSend(text);
+  }
+
+  async function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const text = input.value.trim();
+    if (!text || isTyping) return;
+    input.value = '';
+    hideQuickBtns();
+    await doSend(text);
+  }
+
+  async function doSend(text) {
+    if (isTyping) return;
+    isTyping = true;
+    addMsg(text, 'user');
+    chatHistory.push({ role: 'user', content: text });
+    showTyping();
+
+    try {
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 1000,
+          system: SYSTEM_PROMPT,
+          messages: chatHistory
+        })
+      });
+      const data = await res.json();
+      const reply = data.content?.map(b => b.text || '').join('') || "Désolé, une erreur s'est produite 😅";
+      removeTyping();
+      addMsg(reply, 'bot');
+      chatHistory.push({ role: 'assistant', content: reply });
+    } catch (err) {
+      removeTyping();
+      addMsg("Oops, connexion perdue ! Réessaie 🔄", 'bot');
+    }
+    isTyping = false;
+  }
+</script>
+
+<!-- ─── LIVE CHAT ──────────────────────────────────────────────── -->
+<style>
+  /* Bouton live flottant (à gauche du bot) */
+  #live-toggle {
+    position: fixed;
+    bottom: 28px; right: 100px;
+    width: 58px; height: 58px;
+    background: #1a1a2e;
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    box-shadow: 0 0 14px rgba(232,0,30,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #live-toggle:hover { transform: scale(1.1); box-shadow: 0 0 24px rgba(232,0,30,0.6); }
+  #live-toggle .live-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    color: var(--red);
+  }
+  #live-toggle .live-dot {
+    width: 10px; height: 10px;
+    background: #ff4444;
+    border-radius: 50%;
+    animation: livePulse 1.2s ease-in-out infinite;
+  }
+  @keyframes livePulse {
+    0%,100%{transform:scale(1);opacity:1}
+    50%{transform:scale(1.4);opacity:0.7}
+  }
+  #live-toggle.open { border-color: var(--gold); }
+  #live-toggle.open .live-dot { background: var(--gold); }
+
+  /* Fenêtre live */
+  #live-window {
+    position: fixed;
+    bottom: 100px; right: 100px;
+    width: 340px;
+    height: 500px;
+    background: #0a0a12;
+    border: 1px solid rgba(232,0,30,0.3);
+    border-radius: 2px;
+    display: flex; flex-direction: column;
+    z-index: 798;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8), 0 0 16px rgba(232,0,30,0.1);
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(.4,0,.2,1);
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  }
+  #live-window.open { transform: translateY(0) scale(1); opacity: 1; pointer-events: all; }
+
+  /* Header live */
+  .live-header {
+    background: linear-gradient(90deg, #1a0008, #0d0016);
+    border-bottom: 1px solid rgba(232,0,30,0.25);
+    padding: 10px 14px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .live-header-left { display: flex; align-items: center; gap: 8px; }
+  .live-badge {
+    background: #ff2244;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    padding: 2px 8px;
+    display: flex; align-items: center; gap: 4px;
+    animation: livePulse 1.2s infinite;
+  }
+  .live-badge::before { content:''; width:6px;height:6px;background:#fff;border-radius:50%; }
+  .live-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+  .live-viewers {
+    font-size: 0.72rem;
+    color: var(--grey);
+    display: flex; align-items: center; gap: 4px;
+  }
+  .live-viewers::before { content:'👥'; font-size:0.7rem; }
+
+  /* Messages live */
+  #live-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(232,0,30,0.2) transparent;
+  }
+  #live-messages::-webkit-scrollbar { width: 3px; }
+  #live-messages::-webkit-scrollbar-thumb { background: rgba(232,0,30,0.2); }
+
+  .live-msg {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    animation: liveIn 0.25s ease;
+    display: flex; align-items: flex-start; gap: 6px;
+    flex-wrap: wrap;
+  }
+  @keyframes liveIn {
+    from { opacity:0; transform:translateX(-8px); }
+    to { opacity:1; transform:translateX(0); }
+  }
+  .live-msg .lm-name {
+    font-weight: 700;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .live-msg .lm-text { color: #c8cadd; }
+  .live-msg.own .lm-name { color: var(--gold) !important; }
+  .live-msg.own .lm-text { color: var(--white); }
+  .live-msg.bot-live .lm-name { color: var(--red2); }
+  .live-msg.system .lm-text { color: var(--grey); font-style: italic; font-size: 0.78rem; }
+
+  /* Séparateur */
+  .live-sep {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    margin: 2px 0;
+  }
+
+  /* Pseudo modal */
+  #pseudo-modal {
+    position: absolute;
+    inset: 0;
+    background: rgba(6,6,8,0.97);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    z-index: 10;
+    padding: 2rem;
+  }
+  #pseudo-modal p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: var(--white);
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  #pseudo-modal small { color: var(--grey); font-size: 0.8rem; font-family: 'Rajdhani', sans-serif; }
+  #pseudo-input {
+    width: 100%;
+    background: #1a1a28;
+    border: 1px solid rgba(232,0,30,0.4);
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    padding: 10px 14px;
+    outline: none;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  #pseudo-input:focus { border-color: var(--red); }
+  #pseudo-submit {
+    width: 100%;
+    background: var(--red);
+    border: none;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    padding: 11px;
+    cursor: pointer;
+    clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+    transition: background 0.2s;
+  }
+  #pseudo-submit:hover { background: var(--red2); }
+
+  /* Input live */
+  .live-input-area {
+    border-top: 1px solid rgba(232,0,30,0.15);
+    padding: 8px 10px;
+    display: flex; gap: 6px; align-items: center;
+  }
+  #live-input {
+    flex: 1;
+    background: #14141e;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    padding: 7px 10px;
+    outline: none;
+    border-radius: 2px;
+    transition: border-color 0.2s;
+  }
+  #live-input:focus { border-color: rgba(232,0,30,0.4); }
+  #live-input::placeholder { color: #44445a; }
+  #live-send {
+    background: var(--red);
+    border: none;
+    color: #fff;
+    padding: 7px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+    clip-path: polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);
+  }
+  #live-send:hover { background: var(--red2); }
+
+  @media (max-width: 500px) {
+    #live-window { width: calc(100vw - 32px); right: 16px; bottom: 170px; }
+    #live-toggle { right: 100px; }
+  }
+</style>
+
+<!-- Bouton live -->
+<button id="live-toggle" onclick="toggleLive()" title="Chat Live communauté">
+  <div class="live-dot"></div>
+  <span class="live-label">LIVE</span>
+</button>
+
+<!-- Fenêtre live -->
+<div id="live-window">
+  <!-- Modal pseudo -->
+  <div id="pseudo-modal">
+    <p>Rejoins le Chat Live ‼️</p>
+    <small>Choisis ton pseudo pour chatter avec la communauté</small>
+    <input type="text" id="pseudo-input" placeholder="Ton pseudo..." maxlength="20"
+      onkeydown="if(event.key==='Enter') setPseudo()">
+    <button id="pseudo-submit" onclick="setPseudo()">Entrer dans le Live 🔥</button>
+  </div>
+
+  <div class="live-header">
+    <div class="live-header-left">
+      <div class="live-badge">LIVE</div>
+      <div class="live-title">TANJIRO 59 — COMMUNAUTÉ</div>
+    </div>
+    <div class="live-viewers" id="viewer-count">0</div>
+  </div>
+
+  <div id="live-messages"></div>
+
+  <div class="live-input-area">
+    <input type="text" id="live-input" placeholder="Ton message..." maxlength="200"
+      onkeydown="if(event.key==='Enter') sendLive()">
+    <button id="live-send" onclick="sendLive()">➤</button>
+  </div>
+</div>
+
+<script>
+// ── LIVE CHAT (simulation multi-users partagée via localStorage + BroadcastChannel) ──
+let livePseudo = null;
+let liveOpen = false;
+const COLORS = ['#ff4466','#ff9900','#44ddff','#66ff88','#dd44ff','#ffdd44','#ff6644','#44ffcc','#ff44bb','#aaffee'];
+const BOT_MSGS = [
+  ["🤖 TanjiroBot","Bienvenue dans le chat live ! 🔥"],
+  ["🤖 TanjiroBot","Vous regardez les meilleurs Shorts animé du 59 ⚔️"],
+  ["🤖 TanjiroBot","Quel est ton animé préféré ? 👇"],
+  ["🤖 TanjiroBot","Like & abonne-toi si t'es là ! 🙌"],
+  ["🤖 TanjiroBot","La BMW c'est la vie 🚗💨"],
+  ["🤖 TanjiroBot","Demon Slayer ou Naruto ? Débat en dessous 👇"],
+];
+const FAKE_USERS = [
+  {name:"ShadowFox59",color:"#44ddff"},
+  {name:"AkiraKun",color:"#ff9900"},
+  {name:"NaruFan_59",color:"#66ff88"},
+  {name:"GokuSSJ5",color:"#ffdd44"},
+  {name:"BladeRunner",color:"#dd44ff"},
+  {name:"DemonHunter",color:"#ff4466"},
+  {name:"BMWLover_59",color:"#ff6644"},
+];
+const FAKE_MSGS = [
+  "LFGGG 🔥🔥","abooooonne toi frr 💯","clip de ouf","Demon slayer best animé fr fr","naruto > tout","ma BMW préférée c la M3 😤","bro fait des vidéos trop stylés","PLS continue les Shorts","le 59 represent 💪","FIRE edit bro","on est là fr","premier commentaire gg","magnifique edit","tu gères vraiment bro 🙌","vibe de ouf","next vidéo c quoi ?","j'attends le prochain short 👀","BMW M4 > tout","ce montage 🤯","les gars on est en famille ici"
+];
+
+let liveViewers = Math.floor(Math.random() * 40) + 12;
+let msgIdCounter = 0;
+let bc; // BroadcastChannel
+
+// Pseudo couleur aléatoire
+function randColor() { return COLORS[Math.floor(Math.random()*COLORS.length)]; }
+function pseudoColor(name) {
+  let h = 0;
+  for (let c of name) h = (h*31 + c.charCodeAt(0)) % COLORS.length;
+  return COLORS[h];
+}
+
+function toggleLive() {
+  const win = document.getElementById('live-window');
+  const btn = document.getElementById('live-toggle');
+  liveOpen = !liveOpen;
+  win.classList.toggle('open', liveOpen);
+  btn.classList.toggle('open', liveOpen);
+  if (liveOpen && !livePseudo) {
+    document.getElementById('pseudo-input').focus();
+  }
+}
+
+function setPseudo() {
+  const val = document.getElementById('pseudo-input').value.trim();
+  if (!val) return;
+  livePseudo = val;
+  document.getElementById('pseudo-modal').style.display = 'none';
+  initLive();
+}
+
+function initLive() {
+  // Broadcast channel pour communication entre onglets
+  try {
+    bc = new BroadcastChannel('tanjiro59_live');
+    bc.onmessage = (e) => appendLiveMsg(e.data.name, e.data.text, e.data.color, false);
+  } catch(err) {}
+
+  updateViewers();
+  appendSystem(`🔴 Tu as rejoint le chat en tant que "${livePseudo}"`);
+
+  // Message de bienvenue du bot
+  setTimeout(() => appendLiveMsg("🤖 TanjiroBot", `Bienvenue ${livePseudo} ! 🔥 Content de te voir ici !`, "#ff3355", false), 800);
+
+  // Faux messages réguliers
+  spawnFakeActivity();
+
+  // Bot periodic
+  setInterval(() => {
+    if (!liveOpen) return;
+    const [name, text] = BOT_MSGS[Math.floor(Math.random()*BOT_MSGS.length)];
+    appendLiveMsg(name, text, "#ff3355", false);
+  }, 22000);
+}
+
+function spawnFakeActivity() {
+  const delay = () => Math.random() * 6000 + 2000;
+  function next() {
+    setTimeout(() => {
+      if (Math.random() < 0.15) {
+        // viewer count change
+        liveViewers += Math.floor(Math.random()*3) - 1;
+        if (liveViewers < 5) liveViewers = 5;
+        updateViewers();
+      } else {
+        const u = FAKE_USERS[Math.floor(Math.random()*FAKE_USERS.length)];
+        const m = FAKE_MSGS[Math.floor(Math.random()*FAKE_MSGS.length)];
+        appendLiveMsg(u.name, m, u.color, false);
+      }
+      next();
+    }, delay());
+  }
+  next();
+}
+
+function updateViewers() {
+  document.getElementById('viewer-count').textContent = liveViewers;
+}
+
+function appendSystem(text) {
+  const box = document.getElementById('live-messages');
+  const div = document.createElement('div');
+  div.className = 'live-msg system';
+  div.innerHTML = `<span class="lm-text">${text}</span>`;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+}
+
+function appendLiveMsg(name, text, color, isOwn) {
+  const box = document.getElementById('live-messages');
+  const div = document.createElement('div');
+  div.className = 'live-msg' + (isOwn ? ' own' : '');
+  div.innerHTML = `<span class="lm-name" style="color:${color}">${escHtml(name)}</span><span class="lm-text">${escHtml(text)}</span>`;
+  box.appendChild(div);
+  // Garder max 120 messages
+  while (box.children.length > 120) box.removeChild(box.firstChild);
+  box.scrollTop = box.scrollHeight;
+  // Partager aux autres onglets
+  try { if (!isOwn && bc) {} } catch(e){}
+}
+
+function sendLive() {
+  if (!livePseudo) return;
+  const input = document.getElementById('live-input');
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+  const color = pseudoColor(livePseudo);
+  appendLiveMsg(livePseudo, text, color, true);
+  // Partager aux autres onglets
+  try { if (bc) bc.postMessage({ name: livePseudo, text, color }); } catch(e) {}
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>
